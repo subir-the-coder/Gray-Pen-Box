@@ -26,9 +26,9 @@ cd gray-pen-box
 
 ## Usage 🎯
 
-python3 gray_pen_box.py target.com -t xss
-python3 gray_pen_box.py target.com -t sqli
-python3 gray_pen_box.py target.com -t rce
+python3 penbox.py target.com -t xss
+python3 penbox.py target.com -t sqli
+python3 penbox.py target.com -t rce
 
 ## Sample Output 📜
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/45d61fce-e79b-4b42-b932-ae4dfb8a547e" />
