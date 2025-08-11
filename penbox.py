@@ -25,7 +25,7 @@ import argparse
 import requests
 from urllib3.exceptions import InsecureRequestWarning
 
-# Disable SSL warnings
+# Disabling SSL warnings
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 class BloodyPenBox:
@@ -83,7 +83,7 @@ class BloodyPenBox:
         )
 
     def bloody_comments(self, payload):
-        """Insert bloody comments"""
+        """Injecting bloody comments"""
         bloody_comments = ['/*BLOOD*/', '/*!BLOOD*/', '/**/BLOOD/**/']
         return random.choice(bloody_comments) + payload + random.choice(bloody_comments)
 
@@ -93,7 +93,7 @@ class BloodyPenBox:
         return payload + random.choice(bloody_terminators)
 
     def bloody_parameter_pollute(self, payload):
-        """Bloody parameter pollution"""
+        """Bloody parameter pollutiing"""
         if '=' in payload:
             return payload + "&blood=1"
         return payload
@@ -111,7 +111,7 @@ class BloodyPenBox:
         return payload.replace(" ", random.choice(['%20BLOOD', '%09BLOOD', '%0ABLOOD']))
 
     def bloody_headers(self):
-        """Generate bloody headers"""
+        """Generating bloody headers"""
         return {
             'X-Bloody-IP': f"{random.randint(1,255)}.{random.randint(1,255)}.0.1",
             'User-Agent': 'BloodyBrowser/1.0',
@@ -120,13 +120,13 @@ class BloodyPenBox:
         }
 
     def make_it_bleed(self, payload):
-        """Apply bloody transformations"""
+        """Applying bloody transformations"""
         for technique in random.sample(self.techniques, 3):
             payload = technique(payload)
         return payload, self.bloody_headers()
 
     def bleed_on_target(self, url, vuln_type='xss'):
-        """Make target bleed"""
+        """Make target bleed/fucking hard"""
         if not url.startswith(('http://', 'https://')):
             url = f"http://{url}"
             
@@ -156,7 +156,7 @@ class BloodyPenBox:
         return results
 
 def show_bloody_results(results):
-    """Display bloody results"""
+    """Displaying bloody results"""
     print("\n\033[91m" + "═"*60 + "\033[0m")
     for result in results:
         print("\n\033[91m[ BLOODY TEST ]\033[0m")
